@@ -31,3 +31,26 @@ func ExampleAvg() {
         // Output: 10
 }
 
+func ExampleTotalInCategory() {
+        card := []types.Payment{
+                {
+                        ID:       1,
+                        Amount:   10,
+                        Category: "car",
+                },
+                {
+                        ID:       2,
+                        Amount:   10,
+                        Category: "car",
+                },
+                {
+                        ID:       3,
+                        Amount:   10,
+                        Category: "photo",
+                },
+        }
+
+        fmt.Println(TotalInCategory(card, "car"))
+
+        // Output: 20
+}
